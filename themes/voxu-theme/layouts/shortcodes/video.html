@@ -1,0 +1,10 @@
+<video
+  controls
+  {{ if eq (.Get "autoplay") "true" }}autoplay{{ end }}
+  {{ if eq (.Get "muted") "true" }}muted{{ end }}
+  {{ if eq (.Get "loop") "true" }}loop{{ end }}
+  playsinline
+  style="width:100%; border-radius:12px;"
+>
+  <source src="{{ .Get "src" }}" type="video/mp4">
+</video>

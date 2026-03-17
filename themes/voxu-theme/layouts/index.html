@@ -1,7 +1,35 @@
 {{ define "main" }}
   <section class="intro">
     <h1>hey, i'm jp.</h1>
-    <p>I'm a 4th year undergraduate CS student. This website serves to document my accomplished games, projects, and other work. I enjoy creating art and studying effective and empathetic videogame design.</p>
-    
+    <p>I'm a 4th year CS from De La Salle University. I'm passionate about game design and development, 3D art, and web development. This site documents my games, 3D work, and other projects.</p>
+    <div class="intro-tags">
+      <span>🎮 Game Design</span>
+      <span>🎨 3D Art</span>
+      <span>🎵 Music</span>
+      <span>💻 CS</span>
+    </div>
+    <div class="currently">
+      <span class="currently-label">currently</span>
+      <ul>
+        <li>completing my thesis in empathetic game design</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="featured">
+    <h2>work</h2>
+    <div class="card-grid">
+      {{ range where .Site.RegularPages "Section" "in" (slice "games" "projects") }}
+      <a class="card" href="{{ .RelPermalink }}">
+        {{ with .Params.image }}
+        <img src="{{ . }}" alt="{{ $.Title }}">
+        {{ end }}
+        <div class="card-body">
+          <h3>{{ .Title }}</h3>
+          <p>{{ .Summary }}</p>
+        </div>
+      </a>
+      {{ end }}
+    </div>
   </section>
 {{ end }}

@@ -1,0 +1,57 @@
+{{ define "main" }}
+
+<div class="about-hero">
+  <img src="/images/videogame_render.png" alt="Videogame render">
+</div>
+
+<div class="container">
+  <div class="about-intro">
+    <div class="about-text">
+      <h1>John Paul Carney</h1>
+      <p class="about-sub">CS undergrad · De La Salle University</p>
+      {{ .Content }}
+      <a href="mailto:jp_carney@dlsu.edu.ph" class="contact-btn">Get in touch ↗</a>
+    </div>
+  </div>
+
+  <div class="about-grid">
+    <div class="about-block">
+      <h3>🎨 art & animation</h3>
+      <ul>
+        <li>Blender</li>
+        <li>Aseprite</li>
+        <li>Photoshop</li>
+        <li>Substance Painter</li>
+      </ul>
+    </div>
+    <div class="about-block">
+      <h3>🎬 video & audio</h3>
+      <ul>
+        <li>After Effects</li>
+        <li>DaVinci Resolve</li>
+        <li>FL Studio</li>
+        <li>Audacity</li>
+      </ul>
+    </div>
+    <div class="about-block">
+      <h3>🎮 game dev</h3>
+      <ul>
+        <li>Godot</li>
+        <li>Unity</li>
+        <li>C#</li>
+      </ul>
+    </div>
+    <div class="about-block">
+      <h3>💻 software & web</h3>
+      <ul>
+        <li>HTML / CSS / JS</li>
+        <li>React / Node.js</li>
+        <li>Python / C / C++ / Java</li>
+        <li>MySQL / MongoDB</li>
+        <li>WordPress</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+{{ end }}
